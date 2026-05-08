@@ -6,27 +6,59 @@
 <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 <style>
   :root {
-    --bg: #f2f5fb;
-    --card: #ffffff;
-    --ink: #1f2937;
-    --muted: #5b6472;
-    --brand: #155eef;
-    --brand-soft: #e7efff;
-    --danger: #d92d20;
-    --danger-soft: #fff1f0;
-    --stroke: #dde3ee;
-    --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    --bg: #090f2a;
+    --bg-2: #0f1a45;
+    --card: rgba(12, 25, 70, 0.72);
+    --ink: #f2f6ff;
+    --muted: #b7c5ea;
+    --brand: #24d6e8;
+    --brand-2: #9656ff;
+    --danger: #ff5a91;
+    --danger-soft: rgba(255, 90, 145, 0.12);
+    --stroke: rgba(69, 108, 216, 0.35);
+    --shadow: 0 16px 30px rgba(0, 0, 0, 0.34);
   }
   * { box-sizing: border-box; }
   body {
     font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 32px;
-    background: radial-gradient(circle at top right, #eaf0ff 0%, var(--bg) 45%);
+    background:
+      radial-gradient(circle at 12% 12%, rgba(36, 214, 232, 0.16), transparent 30%),
+      radial-gradient(circle at 92% 8%, rgba(150, 86, 255, 0.18), transparent 30%),
+      linear-gradient(165deg, var(--bg) 0%, var(--bg-2) 100%);
     color: var(--ink);
     line-height: 1.45;
   }
   .container { max-width: 1380px; margin: 0 auto; }
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(135deg, rgba(22, 46, 120, 0.75), rgba(10, 25, 78, 0.78));
+    border: 1px solid var(--stroke);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .brand-logo-wrap {
+    width: 118px;
+    height: 118px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(36, 214, 232, 0.5);
+    flex-shrink: 0;
+  }
+  .brand-logo { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .team-title {
+    margin: 0 0 4px;
+    color: var(--brand);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
   h1 {
     margin: 0 0 8px 0;
     font-size: 2rem;
@@ -34,15 +66,15 @@
   }
   h2 {
     margin-top: 28px;
-    color: #0f52d6;
-    border-bottom: 2px solid #c8d9ff;
+    color: #74d9ff;
+    border-bottom: 2px solid rgba(116, 217, 255, 0.35);
     padding-bottom: 8px;
     font-size: 1.2rem;
   }
   p { color: var(--muted); margin: 0 0 8px 0; }
   code {
-    background: #edf2ff;
-    color: #1f3c88;
+    background: rgba(37, 217, 232, 0.16);
+    color: #89eeff;
     padding: 2px 8px;
     border-radius: 999px;
     font-size: 0.85em;
@@ -55,6 +87,7 @@
     border-radius: 14px;
     text-align: center;
     border: 1px solid var(--stroke);
+    backdrop-filter: blur(4px);
     box-shadow: var(--shadow);
   }
   .kpi .num { font-size: 30px; font-weight: 800; color: var(--brand); letter-spacing: -0.02em; }
@@ -66,6 +99,7 @@
     padding: 10px;
     border-radius: 14px;
     border: 1px solid var(--stroke);
+    backdrop-filter: blur(4px);
     box-shadow: var(--shadow);
   }
   .anomalies, .pareto {
@@ -84,10 +118,10 @@
   .anomaly .entity { font-weight: 700; color: var(--ink); }
   .anomaly .amount { color: var(--danger); font-size: 20px; font-weight: 800; }
   .anomaly .object { color: var(--muted); font-size: 13px; margin: 4px 0; }
-  .anomaly a { color: #0f52d6; text-decoration: none; font-weight: 600; }
+  .anomaly a { color: #72e8ff; text-decoration: none; font-weight: 700; }
   .anomaly a:hover { text-decoration: underline; }
   .pareto ul { margin: 0; padding-left: 18px; }
-  .pareto li { margin: 8px 0; color: #374151; }
+  .pareto li { margin: 8px 0; color: #d9e5ff; }
   footer {
     text-align: center;
     color: var(--muted);
@@ -99,9 +133,17 @@
 </head>
 <body>
   <div class="container">
-  <h1>Dashboard SECOP II - Contratos Electrónicos</h1>
-  <p>Panorama ejecutivo basado en 1,003,902 contratos del dataset
-     <code>jbjy-vk9h</code> de Datos Abiertos Colombia.</p>
+  <div class="hero">
+    <div class="brand-logo-wrap">
+      <img class="brand-logo" src="file:logo.png" alt="Logo Xponential AI">
+    </div>
+    <div class="brand-meta">
+      <p class="team-title">Equipo: Xponential AI</p>
+      <h1>Dashboard SECOP II - Contratos Electrónicos</h1>
+      <p>Análisis basado en 1,003,902 contratos del dataset
+         <code>jbjy-vk9h</code> de Datos Abiertos Colombia.</p>
+    </div>
+  </div>
 
   <h2>Indicadores clave</h2>
   
