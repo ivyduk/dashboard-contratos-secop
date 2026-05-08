@@ -1,0 +1,216 @@
+{
+  "p3_total_registros": 1003902,
+  "p4_total_variables": 84,
+  "p5_registros_2025": 999490,
+  "p6_pct_pymes": 13.1964,
+  "p7_n_pymes": 132479,
+  "p8_top10_departamentos": [
+    {
+      "posicion": 1,
+      "departamento": "Distrito Capital de Bogotá",
+      "contratos": 280248
+    },
+    {
+      "posicion": 2,
+      "departamento": "Valle del Cauca",
+      "contratos": 109856
+    },
+    {
+      "posicion": 3,
+      "departamento": "Antioquia",
+      "contratos": 105810
+    },
+    {
+      "posicion": 4,
+      "departamento": "Cundinamarca",
+      "contratos": 49499
+    },
+    {
+      "posicion": 5,
+      "departamento": "Santander",
+      "contratos": 47128
+    },
+    {
+      "posicion": 6,
+      "departamento": "Magdalena",
+      "contratos": 32097
+    },
+    {
+      "posicion": 7,
+      "departamento": "Bolívar",
+      "contratos": 31612
+    },
+    {
+      "posicion": 8,
+      "departamento": "Atlántico",
+      "contratos": 31428
+    },
+    {
+      "posicion": 9,
+      "departamento": "Boyacá",
+      "contratos": 30849
+    },
+    {
+      "posicion": 10,
+      "departamento": "Tolima",
+      "contratos": 27823
+    }
+  ],
+  "p9_pos6": {
+    "departamento": "Magdalena",
+    "contratos": 32097
+  },
+  "p10_modalidad_top": "Contratación directa",
+  "p11_n_modalidad_top": 759993,
+  "p12_top3_entidades": [
+    {
+      "posicion": 1,
+      "entidad": "DISTRITO ESPECIAL DE CIENCIA TECNOLOGIA E INNOVACION DE MEDELLIN",
+      "valor_total": 7192818196456.0
+    },
+    {
+      "posicion": 2,
+      "entidad": "MINISTERIO DE MINAS Y ENERGIA",
+      "valor_total": 5117844982872.0
+    },
+    {
+      "posicion": 3,
+      "entidad": "DEPARTAMENTO DE ANTIOQUIA//",
+      "valor_total": 3842869199771.0
+    }
+  ],
+  "p13_top5_tipos": [
+    {
+      "posicion": 1,
+      "tipo": "Prestación de servicios",
+      "registros": 860913
+    },
+    {
+      "posicion": 2,
+      "tipo": "Decreto 092 de 2017",
+      "registros": 41384
+    },
+    {
+      "posicion": 3,
+      "tipo": "Otro",
+      "registros": 37616
+    },
+    {
+      "posicion": 4,
+      "tipo": "Suministros",
+      "registros": 22669
+    },
+    {
+      "posicion": 5,
+      "tipo": "Compraventa",
+      "registros": 16845
+    }
+  ],
+  "p14_pct_tipo_top": 85.76,
+  "p15_anomalias": [
+    {
+      "posicion": 1,
+      "entidad": "MINISTERIO DE MINAS Y ENERGIA",
+      "monto": 4205027751839.0,
+      "tipo": "Otro",
+      "objeto": "Administrar los recursos y gestionar proyectos del Programa Colombia Solar\nasignados por el MME para implementar soluciones solares fotovoltaicas dirigidas a usuarios\nresidenciales de los estratos 1; 2 y 3 del SIN",
+      "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.9341296&isFromPublicArea=True&isModal=true&asPopupView=true"
+    },
+    {
+      "posicion": 2,
+      "entidad": "MINISTERIO DE COMERCIO INDUSTRIA Y TURISMO - MINCIT",
+      "monto": 2846224257835.0,
+      "tipo": "Compraventa",
+      "objeto": "ENTREGAR A TÍTULO DE ARRENDAMIENTO EL PREDIO Y LAS  CONSTRUCCIONES DE PROPIEDAD DEL MINISTERro DE COMERCIO; INDUSTRIA Y TURISMO; EN DONDE OPERA LA ZONA FRANCA PERMANENTE DENOMINADA ZONA FRANCA INDUSTRIAL DE BIENES Y \nDE SERVICIOS DE BARRANQUILLA UBICADA EN LA CIUDAD DE BARRANQUILLA; DEPARTAMENTO DEL",
+      "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7228411&isFromPublicArea=True&isModal=true&asPopupView=true"
+    },
+    {
+      "posicion": 3,
+      "entidad": "RNEC",
+      "monto": 2553311282500.0,
+      "tipo": "Prestación de servicios",
+      "objeto": "Contratar una solución integral logística; tecnológica; informática y de servicios; para la organización y realización de los procesos electorales a llevarse a cabo en los años 2025 y 2026 a los que se refiere el alcance del objeto; de conformidad con los requerimientos y especificaciones descritos ",
+      "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.8304173&isFromPublicArea=True&isModal=true&asPopupView=true"
+    }
+  ],
+  "p16_pct_anticipos": 0.0753,
+  "p16_n_anticipos": 756,
+  "p17_n_obligacion_ambiental": 21347,
+  "p18_pareto": {
+    "por_contrato": {
+      "total_contratos": 1003902,
+      "valor_total": 166703293895413.0,
+      "pct_valor_en_top20pct_contratos": 90.75,
+      "pct_contratos_que_acumulan_80pct_valor": 3.26,
+      "n_contratos_que_acumulan_80pct_valor": 32701
+    },
+    "por_entidad": {
+      "total_entidades": 3942,
+      "pct_valor_en_top20pct_entidades": 94.03
+    }
+  },
+  "p19_genero": {
+    "Hombre": {
+      "contratos": 378213,
+      "valor_total": 53439223860712.0,
+      "valor_promedio": 141293990.05510652,
+      "valor_mediano": 20400000.0
+    },
+    "Mujer": {
+      "contratos": 434081,
+      "valor_total": 36474139893372.0,
+      "valor_promedio": 84026114.6960406,
+      "valor_mediano": 18850000.0
+    },
+    "No Definido": {
+      "contratos": 188960,
+      "valor_total": 75497039656375.0,
+      "valor_promedio": 399539794.96388125,
+      "valor_mediano": 31803316.0
+    },
+    "Otro": {
+      "contratos": 2648,
+      "valor_total": 1292890484954.0,
+      "valor_promedio": 488251693.71374625,
+      "valor_mediano": 37806607.0
+    }
+  },
+  "p20_anomalias_tipo": [
+    {
+      "variable": "Valor del Contrato",
+      "tipo_actual": "string",
+      "tipo_correcto": "float / decimal",
+      "evidencia": "valores como '$40,825,000' deberían ser numéricos"
+    },
+    {
+      "variable": "Fecha de Firma",
+      "tipo_actual": "string",
+      "tipo_correcto": "datetime",
+      "evidencia": "valores como '01/17/2024' deberían ser fechas tipadas"
+    },
+    {
+      "variable": "Es Pyme / Habilita Pago Adelantado / Obligación Ambiental",
+      "tipo_actual": "string ('Si'/'No')",
+      "tipo_correcto": "boolean",
+      "evidencia": "valores binarios deberían ser True/False"
+    },
+    {
+      "variable": "Dias adicionados",
+      "tipo_actual": "string",
+      "tipo_correcto": "integer",
+      "evidencia": "días son enteros, no texto"
+    },
+    {
+      "variable": "Nit Entidad",
+      "tipo_actual": "string",
+      "tipo_correcto": "integer (o string si incluye dígito verificación)",
+      "evidencia": "NIT son números, exigen tipo numérico para joins consistentes"
+    },
+    {
+      "variable": "Saldo CDP / Valor Pagado / Valor Facturado / etc.",
+      "tipo_actual": "string",
+      "tipo_correcto": "float",
+      "evidencia": "todas las columnas monetarias llegan con $ y comas como string"
+    }
+  ]
+}
