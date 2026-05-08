@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación API - Estadísticas SECOP II</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --border: #e2e8f0;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
+        }
+        h1, h2, h3 {
+            color: #0f172a;
+        }
+        h1 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        .endpoint {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-left: 5px solid var(--primary);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        .method {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        .type {
+            color: #d97706;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .example-block {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentación de API - Estadísticas SECOP II</h1>
+        <p>Esta API expone el resumen estadístico y los hallazgos del análisis de datos masivo sobre la plataforma SECOP II. Este endpoint es ideal para integrar dashboards de inteligencia de negocios (BI) o auditoría.</p>
+
+        <h2>Endpoint Principal</h2>
+        <div class="endpoint">
+            <span class="method">GET</span> /api/v1/secop/stats
+        </div>
+
+        <h3>Respuesta Exitosa (200 OK)</h3>
+        <p>El endpoint retorna un objeto JSON con las métricas clave extraídas del dataset. A continuación se detalla el esquema de respuesta.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Tipo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>p3_total_registros</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Número total de contratos/registros analizados en la base de datos.</td>
+                </tr>
+                <tr>
+                    <td><code>p4_total_variables</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Cantidad de columnas o variables presentes en el dataset original.</td>
+                </tr>
+                <tr>
+                    <td><code>p5_registros_2025</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Número de contratos cuya vigencia o registro corresponde al año 2025.</td>
+                </tr>
+                <tr>
+                    <td><code>p6_pct_pymes</code></td>
+                    <td><span class="type">float</span></td>
+                    <td>Porcentaje total de contratos adjudicados a empresas clasificadas como PYMES.</td>
+                </tr>
+                <tr>
+                    <td><code>p7_n_pymes</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Número absoluto de contratos adjudicados a PYMES.</td>
+                </tr>
+                <tr>
+                    <td><code>p8_top10_departamentos</code></td>
+                    <td><span class="type">array[object]</span></td>
+                    <td>Lista de los 10 departamentos con mayor volumen de contratos. Cada objeto contiene <code>posicion</code>, <code>departamento</code> y <code>contratos</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>p9_pos6</code></td>
+                    <td><span class="type">object</span></td>
+                    <td>Extracción directa del departamento en la sexta posición para acceso rápido.</td>
+                </tr>
+                <tr>
+                    <td><code>p10_modalidad_top</code></td>
+                    <td><span class="type">string</span></td>
+                    <td>Nombre de la modalidad de contratación más utilizada (ej. "Contratación directa").</td>
+                </tr>
+                <tr>
+                    <td><code>p11_n_modalidad_top</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Frecuencia absoluta de la modalidad de contratación principal.</td>
+                </tr>
+                <tr>
+                    <td><code>p12_top3_entidades</code></td>
+                    <td><span class="type">array[object]</span></td>
+                    <td>Top 3 de las entidades que más presupuesto han ejecutado. Contiene <code>entidad</code> y <code>valor_total</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>p13_top5_tipos</code></td>
+                    <td><span class="type">array[object]</span></td>
+                    <td>Las 5 categorías de contratos más comunes (ej. "Prestación de servicios").</td>
+                </tr>
+                <tr>
+                    <td><code>p14_pct_tipo_top</code></td>
+                    <td><span class="type">float</span></td>
+                    <td>Porcentaje de concentración que representa el tipo de contrato principal.</td>
+                </tr>
+                <tr>
+                    <td><code>p15_anomalias</code></td>
+                    <td><span class="type">array[object]</span></td>
+                    <td>Lista de contratos marcados como "anómalos" por sus montos extraordinarios. Incluye <code>entidad</code>, <code>monto</code>, <code>objeto</code> y la <code>url</code> directa al SECOP.</td>
+                </tr>
+                <tr>
+                    <td><code>p16_pct_anticipos</code></td>
+                    <td><span class="type">float</span></td>
+                    <td>Porcentaje de contratos que contemplan pagos por adelantado.</td>
+                </tr>
+                <tr>
+                    <td><code>p16_n_anticipos</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Cantidad neta de contratos con modalidad de pago anticipado.</td>
+                </tr>
+                <tr>
+                    <td><code>p17_n_obligacion_ambiental</code></td>
+                    <td><span class="type">integer</span></td>
+                    <td>Número de contratos que incluyen cláusulas de obligación ambiental o postconsumo.</td>
+                </tr>
+                <tr>
+                    <td><code>p18_pareto</code></td>
+                    <td><span class="type">object</span></td>
+                    <td>Análisis de concentración de riqueza (Principio de Pareto). Muestra la concentración del presupuesto agrupada por contratos y por entidades.</td>
+                </tr>
+                <tr>
+                    <td><code>p19_genero</code></td>
+                    <td><span class="type">object</span></td>
+                    <td>Estadísticas financieras desagregadas por el género del representante legal. Incluye promedio y mediana de valor contractual para Hombre, Mujer y No Definido.</td>
+                </tr>
+                <tr>
+                    <td><code>p20_anomalias_tipo</code></td>
+                    <td><span class="type">array[object]</span></td>
+                    <td>Auditoría de calidad de datos. Lista los campos del dataset original que requieren transformación de tipo de dato (ej. strings que deberían ser booleanos o numéricos).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Ejemplo de Respuesta (Payload)</h3>
+        <div class="example-block">
+<pre>{
+  "p3_total_registros": 1003902,
+  "p10_modalidad_top": "Contratación directa",
+  "p12_top3_entidades": [
+    {
+      "posicion": 1,
+      "entidad": "DISTRITO ESPECIAL DE CIENCIA TECNOLOGIA E INNOVACION DE MEDELLIN",
+      "valor_total": 7192818196456.0
+    }
+  ],
+  "p18_pareto": {
+    "por_contrato": {
+      "pct_valor_en_top20pct_contratos": 90.75
+    }
+  }
+  // ... resto de la estructura
+}</pre>
+        </div>
+    </div>
+</body>
+</html>
